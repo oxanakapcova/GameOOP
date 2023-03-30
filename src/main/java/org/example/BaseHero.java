@@ -1,4 +1,6 @@
 package org.example;
+import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * /**
@@ -25,16 +27,64 @@ package org.example;
  *  *
  *  */
 
-public abstract class BaseHero {
-    Float hp, maxhp; // здоровье
-    String name;
-    int x, y;
-    int attack;
-    int[] damage; // урон
-    int def; // защита
+public abstract class BaseHero implements GameInterface{
+    protected Float hp, maxhp; // здоровье
+    protected String name;
+    protected int x, y;
+    protected int attack;
+    protected int[] damage; // урон
+    protected int def; // защита
 
+    public Float getHp() {
+        return hp;
+    }
+    public void setHp(Float hp) {
+        this.hp = hp;
+    }
+    public Float getMaxhp() {
+        return maxhp;
+    }
+    public void setMaxhp(Float maxhp) {
+        this.maxhp = maxhp;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getX() {
+        return x;
+    }
+    public void setX(int x) {
+        if (x > 0) this.x = x;
+    }
+    public int getY() {
+        return y;
+    }
+    public void setY(int y) {
+        this.y = y;
+    }
+    public int getAttack() {
+        return attack;
+    }
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+    public int getDef() {
+        return def;
+    }
+    public void setDef(int def) {
+        this.def = def;
+    }
+    public int[] getDamage() {
+        return damage;
+    }
+    public void setDamage(int[] damage) {
+        this.damage = damage;
+    }
 
-    public BaseHero(float hp,float maxhp,String name, int x, int y, int attack, int[] damage, int def) {
+    public BaseHero(float hp, float maxhp, String name, int x, int y, int attack, int[] damage, int def) {
         this.hp = this.maxhp = hp;
         this.name = name;
         this.x = x;
@@ -43,5 +93,22 @@ public abstract class BaseHero {
         this.damage = damage;
         this.def = def;
     }
+
+    @Override
+    public void step() {
+
+    }
+
+    @Override
+    public String getInfo() {
+        return this.getClass().getSimpleName();
+    }
+
+    /**
+     * рандомно заполняет список 10 героями
+     * @param arrayList
+     * @return
+     */
+
 
 }

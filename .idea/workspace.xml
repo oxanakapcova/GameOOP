@@ -4,24 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9e255bd-844c-4f07-ae7b-f7058debb956" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ClientCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/BaseHero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Crossbowman.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Monk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Peasant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Sniper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Spearman.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Thief.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Witch.java" afterDir="false" />
+    <list default="true" id="f9e255bd-844c-4f07-ae7b-f7058debb956" name="Changes" comment="Создан абстрактный класс BaseHero , его наследники Spearman, Crossbowman, Peasant, Monk, Witch, Sniper, Thief&#10;В клиентском коде создан экземпляр каждого класса.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/GameInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Names.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClientCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClientCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BaseHero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Crossbowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Crossbowman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Monk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Peasant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Sniper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Spearman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Thief.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Thief.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Witch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Witch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -59,7 +56,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/lenovo/IdeaProjects/Sem01"
+    "last_opened_file_path": "C:/Users/lenovo/IdeaProjects/Game"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -71,6 +68,18 @@
       <option name="presentableId" value="Default" />
       <updated>1679648217693</updated>
     </task>
+    <task id="LOCAL-00001" summary="Создан абстрактный класс BaseHero , его наследники Spearman, Crossbowman, Peasant, Monk, Witch, Sniper, Thief&#10;В клиентском коде создан экземпляр каждого класса.">
+      <created>1679685682383</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679685682383</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Создан абстрактный класс BaseHero , его наследники Spearman, Crossbowman, Peasant, Monk, Witch, Sniper, Thief&#10;В клиентском коде создан экземпляр каждого класса." />
+    <option name="LAST_COMMIT_MESSAGE" value="Создан абстрактный класс BaseHero , его наследники Spearman, Crossbowman, Peasant, Monk, Witch, Sniper, Thief&#10;В клиентском коде создан экземпляр каждого класса." />
   </component>
 </project>
