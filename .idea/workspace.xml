@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9e255bd-844c-4f07-ae7b-f7058debb956" name="Changes" comment="Создан абстрактный класс BaseHero , его наследники Spearman, Crossbowman, Peasant, Monk, Witch, Sniper, Thief&#10;В клиентском коде создан экземпляр каждого класса.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/GameInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Names.java" afterDir="false" />
+    <list default="true" id="f9e255bd-844c-4f07-ae7b-f7058debb956" name="Changes" comment="Добавлен интерфейс. В котором  два метода, void step(); и String getInfo(); Реализовано: интерфейсs в абстрактном классе и в наследниках так, чтобы getInfo возвращал тип персонажа. Создано два списка в классе main. В каждом из списков добавлено по 10 экземнляров наследников BaseHero. Удалены ненужные методы из абстрактного класса. В клиентстком коде пройдено по спискам и вызваны у всех персонажей getInfo.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Additionally.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Shooter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClientCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClientCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BaseHero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Crossbowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Crossbowman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Monk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Peasant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Names.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Names.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Sniper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Spearman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Thief.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Thief.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Witch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Witch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +58,11 @@
     "last_opened_file_path": "C:/Users/lenovo/IdeaProjects/Game"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -75,11 +79,19 @@
       <option name="project" value="LOCAL" />
       <updated>1679685682383</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавлен интерфейс. В котором  два метода, void step(); и String getInfo(); Реализовано: интерфейсs в абстрактном классе и в наследниках так, чтобы getInfo возвращал тип персонажа. Создано два списка в классе main. В каждом из списков добавлено по 10 экземнляров наследников BaseHero. Удалены ненужные методы из абстрактного класса. В клиентстком коде пройдено по спискам и вызваны у всех персонажей getInfo.">
+      <created>1680168014408</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680168014408</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Создан абстрактный класс BaseHero , его наследники Spearman, Crossbowman, Peasant, Monk, Witch, Sniper, Thief&#10;В клиентском коде создан экземпляр каждого класса." />
-    <option name="LAST_COMMIT_MESSAGE" value="Создан абстрактный класс BaseHero , его наследники Spearman, Crossbowman, Peasant, Monk, Witch, Sniper, Thief&#10;В клиентском коде создан экземпляр каждого класса." />
+    <MESSAGE value="Добавлен интерфейс. В котором  два метода, void step(); и String getInfo(); Реализовано: интерфейсs в абстрактном классе и в наследниках так, чтобы getInfo возвращал тип персонажа. Создано два списка в классе main. В каждом из списков добавлено по 10 экземнляров наследников BaseHero. Удалены ненужные методы из абстрактного класса. В клиентстком коде пройдено по спискам и вызваны у всех персонажей getInfo." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен интерфейс. В котором  два метода, void step(); и String getInfo(); Реализовано: интерфейсs в абстрактном классе и в наследниках так, чтобы getInfo возвращал тип персонажа. Создано два списка в классе main. В каждом из списков добавлено по 10 экземнляров наследников BaseHero. Удалены ненужные методы из абстрактного класса. В клиентстком коде пройдено по спискам и вызваны у всех персонажей getInfo." />
   </component>
 </project>

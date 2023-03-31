@@ -30,7 +30,7 @@ import java.util.Random;
 public abstract class BaseHero implements GameInterface{
     protected Float hp, maxhp; // здоровье
     protected String name;
-    protected int x, y;
+    protected Position position;
     protected int attack;
     protected int[] damage; // урон
     protected int def; // защита
@@ -53,18 +53,7 @@ public abstract class BaseHero implements GameInterface{
     public void setName(String name) {
         this.name = name;
     }
-    public int getX() {
-        return x;
-    }
-    public void setX(int x) {
-        if (x > 0) this.x = x;
-    }
-    public int getY() {
-        return y;
-    }
-    public void setY(int y) {
-        this.y = y;
-    }
+
     public int getAttack() {
         return attack;
     }
@@ -87,16 +76,14 @@ public abstract class BaseHero implements GameInterface{
     public BaseHero(float hp, float maxhp, String name, int x, int y, int attack, int[] damage, int def) {
         this.hp = this.maxhp = hp;
         this.name = name;
-        this.x = x;
-        this.y = y;
+        position = new Position(x, y);
         this.attack = attack;
         this.damage = damage;
         this.def = def;
     }
 
     @Override
-    public void step() {
-
+    public void step(ArrayList<BaseHero> arrayList) {
     }
 
     @Override
@@ -104,11 +91,7 @@ public abstract class BaseHero implements GameInterface{
         return this.getClass().getSimpleName();
     }
 
-    /**
-     * рандомно заполняет список 10 героями
-     * @param arrayList
-     * @return
-     */
+
 
 
 }
