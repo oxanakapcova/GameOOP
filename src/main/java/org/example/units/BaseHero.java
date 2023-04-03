@@ -1,6 +1,8 @@
-package org.example;
+package org.example.units;
+import org.example.GameInterface;
+import org.example.Position;
+
 import java.util.ArrayList;
-import java.util.Random;
 
 /**
  * /**
@@ -27,7 +29,7 @@ import java.util.Random;
  *  *
  *  */
 
-public abstract class BaseHero implements GameInterface{
+public abstract class BaseHero implements GameInterface {
     protected Float hp, maxhp; // здоровье
     protected String name;
     protected Position position;
@@ -53,7 +55,6 @@ public abstract class BaseHero implements GameInterface{
     public void setName(String name) {
         this.name = name;
     }
-
     public int getAttack() {
         return attack;
     }
@@ -73,24 +74,58 @@ public abstract class BaseHero implements GameInterface{
         this.damage = damage;
     }
 
-    public BaseHero(float hp, float maxhp, String name, int x, int y, int attack, int[] damage, int def) {
+    /**
+     * конструктор
+     * @param hp
+     * @param maxhp
+     * @param name
+     * @param position
+     * @param attack
+     * @param damage
+     * @param def
+     */
+    public BaseHero(float hp, String name, Position position, int attack, int[] damage, int def) {
         this.hp = this.maxhp = hp;
         this.name = name;
-        position = new Position(x, y);
+        this.position = new Position(position.x, position.y);
         this.attack = attack;
         this.damage = damage;
         this.def = def;
     }
 
     @Override
-    public void step(ArrayList<BaseHero> arrayList) {
+    public  void step(ArrayList<BaseHero> enemyTeam) {
+
     }
 
     @Override
     public String getInfo() {
         return this.getClass().getSimpleName();
     }
+    /**
+     * находит и возвращает ближайшего врага, принимает список
+     * @param enemyTeam
+     * @return
+     */
+    public BaseHero findNearEnemy(ArrayList<BaseHero> enemyTeam) {
+        BaseHero nearEnemy = enemyTeam.get(0);
+        double distance = position.distance(enemyTeam.get(0).position);
+        double minDistance = distance;
+        for (int i = 1; i < enemyTeam.size(); i++) {
+            if (enemyTeam.get(i).hp <= 0) continue; // если неживой
+            distance = position.distance(enemyTeam.get(i).position);
+            if (minDistance > distance) {
+                minDistance = distance;
+                nearEnemy = enemyTeam.get(i);
+            }
+        }
+        return nearEnemy;
+    }
 
+    /**
+     * абстрактный метод
+     */
+    public abstract void Die();
 
 
 

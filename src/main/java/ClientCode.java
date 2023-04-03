@@ -1,18 +1,22 @@
 import org.example.*;
+import org.example.units.BaseHero;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class ClientCode  {
     public static void main(String[] args) {
-        ArrayList<BaseHero> heroList1 = new ArrayList<>();
-        ArrayList<BaseHero> heroList2 = new ArrayList<>();
-        System.out.println("    Список 1==========");
-        Additionally.getList(heroList1);
-        heroList1.forEach(n -> System.out.println(n.getInfo() + " " + n.getName()));
-        System.out.println("    Список 2===========");
-        Additionally.getList(heroList2);
-        heroList2.forEach(n -> System.out.println(n.getInfo() + " " + n.getName()));
+        ArrayList<BaseHero> teamOwn = new ArrayList<>();
+        ArrayList<BaseHero> teamEnemy = new ArrayList<>();
+        System.out.println("    Список своих ==========");
+        Additionally.getListOwn(teamOwn);//вызов статического метода, обращаемся к классу!
+        teamOwn.forEach(n -> System.out.println(n.getInfo() + " " + n.getName()));
+        System.out.println("    Список противников ===========");
+        Additionally.getListEnemy(teamEnemy);
+        teamEnemy.forEach(n -> System.out.println(n.getInfo() + " " + n.getName()));
+        System.out.println("    ====Начало игры====");
+        teamOwn.forEach(n -> n.step(teamEnemy));
+        teamEnemy.forEach(n -> n.step(teamOwn));
+
     }
 
 

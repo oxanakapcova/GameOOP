@@ -1,7 +1,7 @@
 package org.example;
 
 public class Position {
-    protected int x, y;
+    public int x, y;
 
 
     public Position(int x, int y) {
