@@ -10,11 +10,11 @@ import java.util.ArrayList;
 public class Crossbowman extends Shooter {
 
     public Crossbowman(String name, Position position) {
-        super(90, name, position, 100, new int[]{7,19}, 70, 85, 10);
+        super(90, name, position, 100, new int[]{7,19}, 70, 85, 10, 2);
     }
 
     @Override
-    public void step(ArrayList<BaseHero> enemyTeam) {
+    public void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy) {
 
     }
 

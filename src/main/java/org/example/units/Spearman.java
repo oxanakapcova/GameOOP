@@ -19,12 +19,12 @@ public class Spearman extends BaseHero {
     }
 
     public Spearman(String name, Position position) {
-        super(70, name, position, 100, new int[]{8,10}, 50);
+        super(70, name, position, 100, new int[]{8,10}, 50, 8);
         spear = 10;
     }
 
     @Override
-    public void step(ArrayList<BaseHero> enemyTeam) {
+    public void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy) {
 
     }
 

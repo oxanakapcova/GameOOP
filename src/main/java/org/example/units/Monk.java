@@ -17,13 +17,13 @@ public class Monk extends BaseHero {
     }
 
     public Monk(String name, Position position) {
-        super(100, name, position, 0, new int[]{1,2}, 100);
+        super(100, name, position, 0, new int[]{1,2}, 100, 3);
         holyWater = 10;
         power = 5;
     }
 
     @Override
-    public void step(ArrayList<BaseHero> enemyTeam) {
+    public void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy) {
 
     }
 

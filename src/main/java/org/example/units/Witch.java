@@ -29,14 +29,14 @@ public class Witch extends BaseHero {
     }
 
     public Witch(String name, Position position) {
-        super(90, name, position, 0, new int[]{1,2}, 100);
+        super(90, name, position, 0, new int[]{1,2}, 100,5);
         potion = 10;
         maxPotion = potion;
         power = 3;
     }
 
     @Override
-    public void step(ArrayList<BaseHero> enemyTeam) {
+    public void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy) {
 
     }
 

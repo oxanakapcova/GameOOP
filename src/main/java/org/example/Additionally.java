@@ -39,8 +39,6 @@ public class Additionally {
         }
         return arrayList;
     }
-
-
     public static ArrayList<BaseHero> getListEnemy(ArrayList<BaseHero> arrayList) {
         Random random = new Random();
         int size = 10;
