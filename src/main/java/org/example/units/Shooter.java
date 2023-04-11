@@ -7,7 +7,6 @@ public abstract class Shooter extends BaseHero implements GameInterface {
     protected int accuracy; // точность
     protected int arrows = 10; // стрелы
     protected int maxArrows;
-
     public int getMaxArrows() {
         return maxArrows;
     }
@@ -60,6 +59,6 @@ public abstract class Shooter extends BaseHero implements GameInterface {
 
     @Override
     public String getInfo() {
-        return this.getClass().getSimpleName() + " (здоровье " + hp + ")" + "( стрел " + arrows + ")";
+        return this.getClass().getSimpleName();
     }
 }

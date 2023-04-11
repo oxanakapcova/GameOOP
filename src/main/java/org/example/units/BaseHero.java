@@ -2,30 +2,6 @@ package org.example.units;
 import org.example.GameInterface;
 import org.example.Position;
 import java.util.ArrayList;
-/**
- * /**
- *  * Арбалетчик, Маг, Манах, Крестьянин, Вор, Снайпер, Копьеносец
- *
- *  BASEHERO: hp, maxhp, name, x,y, attack, damage, def
- *  *
- *  * 1 копьеносец spearman: колет копьем, ходит, защищается.Свойства: spear
- *  *
- *  * 1 Арбалетчик crossbowman: стреляет болтами, берет болты у крестьянина, зарядка арбалета. Свойства:
- *  crossbow
- *  *
- *  * 1 Маг witch: лечит, колдует. Свойства: potion количество зелья, power мощность яда
- *  *
- *  * 2 Манах monk: лечит, колдует. holyWater, power
- *  *
- *  * 1,2 Крестьянин peasant: подносит стрелы и болты, . Свойства: invisible невидимость,
- *  *
- *  * 2 Снайпер sniper: стреляет стрелами, берет стрелы у крестьянина, зарядка лука. Свойства:
- *  arrows стрелы
- *  *
- *  * 2 Вор thief: колет ножом, ходит, прячется.Свойства:  knife
- *
- *  *
- *  */
 public abstract class BaseHero implements GameInterface {
     protected Float hp, maxhp; // здоровье
     protected String name;
@@ -75,13 +51,6 @@ public abstract class BaseHero implements GameInterface {
     public void setDef(int def) {
         this.def = def;
     }
-//    //public int[] getDamage() {
-//        return damage;
-//    }
-//    public void setDamage(int[] damage) {
-//        this.damage = damage;
-//    }
-
     /**
      * конструктор
      * @param hp
@@ -102,7 +71,6 @@ public abstract class BaseHero implements GameInterface {
         this.priority = priority;
         this.state = State.stand;
     }
-
     /**
      * абстрактный метод, реализация проведена в наследниках
      * @param arrayFriend
@@ -110,12 +78,9 @@ public abstract class BaseHero implements GameInterface {
      */
     @Override
     public  abstract void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy);
-
-
-
     @Override
     public String getInfo() {
-        return this.getClass().getSimpleName() + " (здоровье " + hp + ")"  ;
+        return this.getClass().getSimpleName();
     }
     /**
      * находит и возвращает ближайшего врага, принимает список
@@ -142,6 +107,19 @@ public abstract class BaseHero implements GameInterface {
             state = State.dead;
         }
     }
+    public int[] getCoord() {
+        return new int[]{position.x,position.y};
+    }
+    @Override
+    public String toString() {
+        return name +
+                " H:" + Math.round(hp) +
+                " D:" + def +
+                " A:" + attack +
+                " Dmg:" + Math.round(Math.abs((damage[0] + damage[1])/2)) +
+                " " + state;
+    }
+
     /**
      * абстрактный метод
      */
