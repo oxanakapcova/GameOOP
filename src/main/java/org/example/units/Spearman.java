@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Копьеносец
  */
-public class Spearman extends BaseHero {
+public class Spearman extends Soldiers {
     private int spear;
 
     public int getSpear() {
@@ -23,10 +23,7 @@ public class Spearman extends BaseHero {
         spear = 10;
     }
 
-    @Override
-    public void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy) {
 
-    }
 
     @Override
     public void Die() {

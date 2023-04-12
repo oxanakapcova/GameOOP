@@ -64,7 +64,7 @@ public abstract class BaseHero implements GameInterface {
     public BaseHero(float hp, String name, Position position, int attack, int[] damage, int def, int priority) {
         this.hp = this.maxhp = hp;
         this.name = name;
-        this.position = new Position(position.x, position.y);
+        this.position = position;
         this.attack = attack;
         this.damage = damage;
         this.def = def;
@@ -108,7 +108,7 @@ public abstract class BaseHero implements GameInterface {
         }
     }
     public int[] getCoord() {
-        return new int[]{position.x,position.y};
+        return new int[]{position.getX(),position.getY()};
     }
     @Override
     public String toString() {

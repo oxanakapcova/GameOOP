@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Класс вор
  */
-public class Thief extends BaseHero {
+public class Thief extends Soldiers {
     private int knife;
 
     public int getKnife() {
@@ -24,10 +24,8 @@ public class Thief extends BaseHero {
 
     }
 
-    @Override
-    public void step(ArrayList<BaseHero> arrayFriend , ArrayList<BaseHero> arrayEnemy) {
 
-    }
+
 
     @Override
     public void Die() {

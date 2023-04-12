@@ -8,16 +8,12 @@ public class ClientCode  {
     static ArrayList<BaseHero> teamEnemy = new ArrayList<>();
     static ArrayList<BaseHero> teamAll = new ArrayList<>();
     public static void main(String[] args) {
-        System.out.println("    Список своих ==========");
         Additionally.getList(teamOwn, 1);//вызов статического метода, обращаемся к классу!
-        teamOwn.forEach(n -> System.out.println(n.getInfo() + " " + n.getName() + " (здоровье " + n.getHp() + ")"));
-        System.out.println("    Список противников ===========");
+        //teamOwn.forEach(n -> System.out.println(n.getInfo() + " " + n.getName() + " (здоровье " + n.getHp() + ")"));
         Additionally.getList(teamEnemy, 10);
-        teamEnemy.forEach(n -> System.out.println(n.getInfo() + " " + n.getName() + " (здоровье " + n.getHp() + ")"));
-        System.out.println("    Cписок объединенных отсортированных по приоритету команд ==========");
+        //teamEnemy.forEach(n -> System.out.println(n.getInfo() + " " + n.getName() + " (здоровье " + n.getHp() + ")"));
         teamAll.addAll(teamOwn);
         teamAll.addAll(teamEnemy);
-        // сортировка по приоритету
         teamAll.sort(new Comparator<BaseHero>() {
             @Override
             public int compare(BaseHero o1, BaseHero o2) {

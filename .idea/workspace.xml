@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9e255bd-844c-4f07-ae7b-f7058debb956" name="Changes" comment="Дописан ход шутера. Прописан ход крестьянина(меняет состояние). Оставлены выводы на консоль чтоб отследить шаги. В конце добавлен вывод всех игроков с их здоровьем и количеством стрел у шутеров.">
+    <list default="true" id="f9e255bd-844c-4f07-ae7b-f7058debb956" name="Changes" comment="Добавлены view, ansiColors. Убраны лишние методы и некоторые геттеры и сеттеры. Полностью дописана логика шага крестьянина и шутера. Простая графика.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Soldiers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClientCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ClientCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Additionally.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Additionally.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ClientCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ClientCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/BaseHero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Peasant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Shooter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Sniper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Spearman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Thief.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Thief.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +33,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.jdks/openjdk-19.0.2/lib/src.zip!/java.base/java/lang/Class.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-19.0.2/lib/src.zip!/java.base/java/lang/Math.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -56,7 +56,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/lenovo/IdeaProjects/OOPlections"
+    "last_opened_file_path": "C:/Users/lenovo/IdeaProjects/untitled"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -111,7 +111,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680768778112</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Добавлены view, ansiColors. Убраны лишние методы и некоторые геттеры и сеттеры. Полностью дописана логика шага крестьянина и шутера. Простая графика.">
+      <created>1681191363973</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681191363973</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Добавлены view, ansiColors. Убраны лишние методы и некоторые геттеры и сеттеры. Полностью дописана логика шага крестьянина и шутера. Простая графика.">
+      <created>1681191382203</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681191382203</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -120,7 +134,8 @@
     <MESSAGE value="Код ревью. Метод заполнения листа перенесен в отдельный класс Additionally. Создан Шутер наследник БэйзГеро и от него 2 наследника, Прописан @Override step для шутера. Переписана сигнатура степа. Создан класс Position c методом поиска расстояния." />
     <MESSAGE value="Код ревью. Метод заполнения листа перенесен в отдельный класс Additionally. Создан Шутер наследник БэйзГеро и от него 2 наследника, Прописан @Override step для шутера. Переписана сигнатура степа. Создан класс Position c методом поиска расстояния. Прописана общая логика шутера и сделан поиск ближайшего противника и вывод его имени на консоль для обеих команд. Создан абстрактный метод die без логики. Создан пакет units куда перенесены все игроки" />
     <MESSAGE value="Дописан ход шутера. Прописан ход крестьянина(меняет состояние). Оставлены выводы на консоль чтоб отследить шаги. В конце добавлен вывод всех игроков с их здоровьем и количеством стрел у шутеров." />
-    <option name="LAST_COMMIT_MESSAGE" value="Дописан ход шутера. Прописан ход крестьянина(меняет состояние). Оставлены выводы на консоль чтоб отследить шаги. В конце добавлен вывод всех игроков с их здоровьем и количеством стрел у шутеров." />
+    <MESSAGE value="Добавлены view, ansiColors. Убраны лишние методы и некоторые геттеры и сеттеры. Полностью дописана логика шага крестьянина и шутера. Простая графика." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены view, ansiColors. Убраны лишние методы и некоторые геттеры и сеттеры. Полностью дописана логика шага крестьянина и шутера. Простая графика." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

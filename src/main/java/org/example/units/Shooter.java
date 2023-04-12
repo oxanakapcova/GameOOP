@@ -7,24 +7,24 @@ public abstract class Shooter extends BaseHero implements GameInterface {
     protected int accuracy; // точность
     protected int arrows = 10; // стрелы
     protected int maxArrows;
-    public int getMaxArrows() {
-        return maxArrows;
-    }
-    public void setMaxArrows(int maxArrows) {
-        this.maxArrows = maxArrows;
-    }
-    public int getArrows() {
-        return arrows;
-    }
-    public void setArrows(int arrows) {
-        this.arrows = arrows;
-    }
-    public int getAccuracy() {
-        return accuracy;
-    }
-    public void setAccuracy(int accuracy) {
-        this.accuracy = accuracy;
-    }
+//    public int getMaxArrows() {
+//        return maxArrows;
+//    }
+//    public void setMaxArrows(int maxArrows) {
+//        this.maxArrows = maxArrows;
+//    }
+//    public int getArrows() {
+//        return arrows;
+//    }
+//    public void setArrows(int arrows) {
+//        this.arrows = arrows;
+//    }
+//    public int getAccuracy() {
+//        return accuracy;
+//    }
+//    public void setAccuracy(int accuracy) {
+//        this.accuracy = accuracy;
+//    }
     public Shooter(float hp, String name, Position position, int attack,
                    int[] damage, int def, int accuracy, int arrows, int prioritet) {
         super(hp, name, position, attack, damage, def, prioritet);
@@ -45,16 +45,16 @@ public abstract class Shooter extends BaseHero implements GameInterface {
             }
         }
         if (arrows > 0) {
-            BaseHero closestEnemy = findNearEnemy(arrayEnemy);
-            System.out.println("Найден ближайший противник: " + closestEnemy.getInfo() + " " + closestEnemy.getName());
-            //checkPeasant(arrayFriend);
-            Random r = new Random();
-            closestEnemy.getDamage(r.nextInt(damage[0], damage[1]+1)); // урон противника
-            System.out.println(this.getInfo() + this.getName() + " стреляет в " + closestEnemy.getInfo() + " " + closestEnemy.getName());
-            arrows--;
+            BaseHero nearEnemy = findNearEnemy(arrayEnemy);
+            //System.out.println("Найден ближайший противник: " + nearEnemy.getInfo() + " " + nearEnemy.getName());
+            if (nearEnemy.getHp() > 0) {
+                Random r = new Random();
+                nearEnemy.getDamage(r.nextInt(damage[0], damage[1] + 1)); // урон противника
+                arrows--;
+            }
         }
-        System.out.println("Осталось " + arrows + " стрел");
-        System.out.println("    =======Конец хода shooter=======");
+//        System.out.println("Осталось " + arrows + " стрел");
+//        System.out.println("    =======Конец хода shooter=======");
     }
 
     @Override
