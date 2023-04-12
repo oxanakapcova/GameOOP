@@ -4,15 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9e255bd-844c-4f07-ae7b-f7058debb956" name="Changes" comment="Добавлены view, ansiColors. Убраны лишние методы и некоторые геттеры и сеттеры. Полностью дописана логика шага крестьянина и шутера. Простая графика.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Soldiers.java" afterDir="false" />
+    <list default="true" id="f9e255bd-844c-4f07-ae7b-f7058debb956" name="Changes" comment="Внесены изменения в шаг шутера и пехоты чтоб не продолжали убивать тех у кого здоровье меньше 0, закомментированы лишние геттеры и сеттеры и выводы на консоль.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Mag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Additionally.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Additionally.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ClientCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ClientCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Names.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Names.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/BaseHero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Crossbowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Crossbowman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Monk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Peasant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Shooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Sniper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Soldiers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Soldiers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Spearman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Thief.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Thief.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Witch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Witch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +65,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/lenovo/IdeaProjects/untitled"
+    "last_opened_file_path": "C:/Users/lenovo/IdeaProjects/GameOOP"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -66,6 +75,21 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="GameOOP" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="GameOOP" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -125,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681191382203</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Внесены изменения в шаг шутера и пехоты чтоб не продолжали убивать тех у кого здоровье меньше 0, закомментированы лишние геттеры и сеттеры и выводы на консоль.">
+      <created>1681284711108</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681284711108</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -135,17 +166,7 @@
     <MESSAGE value="Код ревью. Метод заполнения листа перенесен в отдельный класс Additionally. Создан Шутер наследник БэйзГеро и от него 2 наследника, Прописан @Override step для шутера. Переписана сигнатура степа. Создан класс Position c методом поиска расстояния. Прописана общая логика шутера и сделан поиск ближайшего противника и вывод его имени на консоль для обеих команд. Создан абстрактный метод die без логики. Создан пакет units куда перенесены все игроки" />
     <MESSAGE value="Дописан ход шутера. Прописан ход крестьянина(меняет состояние). Оставлены выводы на консоль чтоб отследить шаги. В конце добавлен вывод всех игроков с их здоровьем и количеством стрел у шутеров." />
     <MESSAGE value="Добавлены view, ansiColors. Убраны лишние методы и некоторые геттеры и сеттеры. Полностью дописана логика шага крестьянина и шутера. Простая графика." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены view, ansiColors. Убраны лишние методы и некоторые геттеры и сеттеры. Полностью дописана логика шага крестьянина и шутера. Простая графика." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/units/BaseHero.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Внесены изменения в шаг шутера и пехоты чтоб не продолжали убивать тех у кого здоровье меньше 0, закомментированы лишние геттеры и сеттеры и выводы на консоль." />
+    <option name="LAST_COMMIT_MESSAGE" value="Внесены изменения в шаг шутера и пехоты чтоб не продолжали убивать тех у кого здоровье меньше 0, закомментированы лишние геттеры и сеттеры и выводы на консоль." />
   </component>
 </project>

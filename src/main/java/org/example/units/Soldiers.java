@@ -1,9 +1,9 @@
 package org.example.units;
+import org.example.GameInterface;
 import org.example.Position;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
-public abstract class Soldiers extends BaseHero{
+public abstract class Soldiers extends BaseHero implements GameInterface {
     public Soldiers(float hp, String name, Position position, int attack, int[] damage, int def, int priority) {
         super(hp, name, position, attack, damage, def, priority);
     }
@@ -11,7 +11,7 @@ public abstract class Soldiers extends BaseHero{
     public void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy) {
         //System.out.println("Ходит пехота");
         if (state == State.dead) return;
-        BaseHero nearEnemy = findNearEnemy(arrayEnemy);
+        BaseHero nearEnemy = findNearPerson(arrayEnemy);
         if (nearEnemy.position.distance(this.position) < 2 & nearEnemy.getHp() > 0) {
             Random r = new Random();
             nearEnemy.getDamage(r.nextInt(damage[0], damage[1]+1));
@@ -37,7 +37,7 @@ public abstract class Soldiers extends BaseHero{
         }
     }
     @Override
-    public void Die() {
-
+    public String getInfo() {
+        return this.getClass().getSimpleName();
     }
 }

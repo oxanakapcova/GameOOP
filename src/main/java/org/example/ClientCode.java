@@ -36,6 +36,5 @@ public class ClientCode  {
             }
             scanner.nextLine();
         }
-
     }
 }

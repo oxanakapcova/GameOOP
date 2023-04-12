@@ -24,43 +24,34 @@ public abstract class BaseHero implements GameInterface {
     public Float getHp() {
         return hp;
     }
-    public void setHp(Float hp) {
-        this.hp = hp;
-    }
+//    public void setHp(Float hp) {
+//        this.hp = hp;
+//    }
     public Float getMaxhp() {
         return maxhp;
     }
-    public void setMaxhp(Float maxhp) {
-        this.maxhp = maxhp;
-    }
+//    public void setMaxhp(Float maxhp) {
+//        this.maxhp = maxhp;
+//    }
     public String getName() {
         return name;
     }
     public void setName(String name) {
         this.name = name;
     }
-    public int getAttack() {
-        return attack;
-    }
-    public void setAttack(int attack) {
-        this.attack = attack;
-    }
-    public int getDef() {
-        return def;
-    }
-    public void setDef(int def) {
-        this.def = def;
-    }
-    /**
-     * конструктор
-     * @param hp
-     * @param maxhp
-     * @param name
-     * @param position
-     * @param attack
-     * @param damage
-     * @param def
-     */
+//    public int getAttack() {
+//        return attack;
+//    }
+//    public void setAttack(int attack) {
+//        this.attack = attack;
+//    }
+//    public int getDef() {
+//        return def;
+//    }
+//    public void setDef(int def) {
+//        this.def = def;
+//    }
+
     public BaseHero(float hp, String name, Position position, int attack, int[] damage, int def, int priority) {
         this.hp = this.maxhp = hp;
         this.name = name;
@@ -71,11 +62,6 @@ public abstract class BaseHero implements GameInterface {
         this.priority = priority;
         this.state = State.stand;
     }
-    /**
-     * абстрактный метод, реализация проведена в наследниках
-     * @param arrayFriend
-     * @param arrayEnemy
-     */
     @Override
     public  abstract void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy);
     @Override
@@ -84,19 +70,19 @@ public abstract class BaseHero implements GameInterface {
     }
     /**
      * находит и возвращает ближайшего врага, принимает список
-     * @param enemyTeam
+     * @param personTeam
      * @return
      */
-    public BaseHero findNearEnemy(ArrayList<BaseHero> enemyTeam) {
-        BaseHero nearEnemy = enemyTeam.get(0);
-        double distance = position.distance(enemyTeam.get(0).position);
+    public BaseHero findNearPerson(ArrayList<BaseHero> personTeam) {
+        BaseHero nearEnemy = personTeam.get(0);
+        double distance = position.distance(personTeam.get(0).position);
         double minDistance = distance;
-        for (int i = 1; i < enemyTeam.size(); i++) {
-            if (enemyTeam.get(i).hp <= 0) continue; // если неживой
-            distance = position.distance(enemyTeam.get(i).position);
+        for (int i = 1; i < personTeam.size(); i++) {
+            if (personTeam.get(i).hp <= 0) continue; // если неживой
+            distance = position.distance(personTeam.get(i).position);
             if (minDistance > distance) {
                 minDistance = distance;
-                nearEnemy = enemyTeam.get(i);
+                nearEnemy = personTeam.get(i);
             }
         }
         return nearEnemy;
@@ -107,24 +93,22 @@ public abstract class BaseHero implements GameInterface {
             state = State.dead;
         }
     }
+    protected void takeHealth(float damage) {
+        hp += damage;
+        if (hp >= maxhp) {
+            hp = maxhp;
+        }
+    }
     public int[] getCoord() {
         return new int[]{position.getX(),position.getY()};
     }
     @Override
     public String toString() {
         return name +
-                " H:" + Math.round(hp) +
-                " D:" + def +
-                " A:" + attack +
+                " Hp:" + Math.round(hp) +
+                " Def:" + def +
+                " Att:" + attack +
                 " Dmg:" + Math.round(Math.abs((damage[0] + damage[1])/2)) +
                 " " + state;
     }
-
-    /**
-     * абстрактный метод
-     */
-    public abstract void Die();
-
-
-
 }

@@ -12,15 +12,8 @@ public class Peasant extends BaseHero {
     }
     @Override
     public void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy) {
-        System.out.println("Ходит " + getInfo() + " " + getName());
+        //System.out.println("Ходит " + getInfo() + " " + getName());
         if (state == State.dead) return;
         state = State.stand;
-        System.out.println("Состояние: " + state);
-        System.out.println("    ========= Конец хода крестьянина=========");
-    }
-
-    @Override
-    public void Die() {
-
     }
 }

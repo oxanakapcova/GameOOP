@@ -21,10 +21,4 @@ public class Additionally {
     public static String getRandomName() {
         return Names.values()[new Random().nextInt(Names.values().length)].toString();
     }
-
-
-
-
-
-
 }
